@@ -38,3 +38,14 @@ def lon_promedio_oraciones(texto):
     palabras = contar_palabras(texto)
     return round(palabras/oraciones)
 
+#Avance de palabras mas repetidas
+def palabras_masrepetidas(textolimpio):
+    conteo=dict()
+    palabras2=limpio.split()
+    for palabra in palabras2 :
+        if palabra in conteo:
+            conteo[palabra]+=1
+        else:
+            conteo[palabra]=1
+    return conteo
+
