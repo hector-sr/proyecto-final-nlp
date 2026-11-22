@@ -49,3 +49,10 @@ def palabras_masrepetidas(textolimpio):
             conteo[palabra]=1
     return conteo
 
+#Sugerencia de la funcion de oraciones
+def contar_oraciones(texto):
+    oraciones=0
+    for carac in texto:
+       if carac in "?.!":
+            oraciones=oraciones+1
+    return oraciones
