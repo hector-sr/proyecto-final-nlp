@@ -1,5 +1,8 @@
-with open("texto_prueba.txt", "r", encoding = "utf-8") as archivo:
-    texto = archivo.read()
+import auxiliar
+
+ruta = auxiliar.seleccionar_archivo()
+with open (ruta, "r") as file:
+    texto = file.read()
 
 if texto.replace(" ", "").replace("\n", "") == "":
     print("El texto es un texto vacio")
