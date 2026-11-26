@@ -8,16 +8,34 @@ def eliminacion_Stopwords(texto):
             sin_stopworks.append(palabra)
     return sin_stopworks
 
-def palabras_masrepetidas(texto):
-    limpio = texto.lower().replace(",", "").replace(".","").replace("?","").replace("¿","").replace("!","").replace("¡","")
-    conteo=dict()
-    palabras2=limpio.split()
-    for palabra in palabras2 :
+def palabras_masrepetidas(textolimpio):
+    conteo = dict()
+    palabras2 = limpio.split()
+
+    for palabra in palabras2:
         if palabra in conteo:
-            conteo[palabra]+=1
+            conteo[palabra] += 1
         else:
-            conteo[palabra]=1
-    return conteo
+            conteo[palabra] = 1
+
+    top5 = []
+
+    for rep in range(5):
+        mayor = 0
+        palabra_mayor = ""
+
+        for palabra in conteo:
+            if conteo[palabra] > mayor:
+                mayor = conteo[palabra]
+                palabra_mayor = palabra
+
+        
+
+        top5.append([palabra_mayor, mayor])
+        del conteo[palabra_mayor]
+
+    return top5
+
 
 #def diversidad_lexica (texto):
 def TTR(texto:str) -> int:
