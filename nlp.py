@@ -20,3 +20,7 @@ def palabras_masrepetidas(texto):
     return conteo
 
 #def diversidad_lexica (texto):
+def TTR(texto:str) -> int:
+    Palabras_unicas=len(set(eliminacion_Stopwords(texto)))
+    Palabras_Tsinstop=len(eliminacion_Stopwords(texto))
+    return Palabras_unicas/Palabras_Tsinstop
