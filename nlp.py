@@ -1,5 +1,5 @@
 
-def eliminacion_Stopwords(texto):
+def eliminacion_Stopwords(texto:str)->lista:
     limpio = texto.lower().replace(",", "").replace(".","").replace("?","").replace("¿","").replace("!","").replace("¡","")
     stopwords = set(["el", "la", "los", "las", "de", "en", "y", "que", "un", "una", "con", "por", "a"])
     sin_stopworks=[]
@@ -8,7 +8,7 @@ def eliminacion_Stopwords(texto):
             sin_stopworks.append(palabra)
     return sin_stopworks
 
-def palabras_masrepetidas(textolimpio):
+def palabras_masrepetidas(texto:str)-> lista:
     conteo = dict()
     palabras2 = limpio.split()
 
