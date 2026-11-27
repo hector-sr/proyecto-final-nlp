@@ -1,5 +1,5 @@
 
-def eliminacion_Stopwords(texto:str)->lista:
+def eliminacion_Stopwords(texto:str)->list:
     limpio = texto.lower().replace(",", "").replace(".","").replace("?","").replace("¿","").replace("!","").replace("¡","")
     stopwords = set(["el", "la", "los", "las", "de", "en", "y", "que", "un", "una", "con", "por", "a"])
     sin_stopworks=[]
@@ -8,7 +8,8 @@ def eliminacion_Stopwords(texto:str)->lista:
             sin_stopworks.append(palabra)
     return sin_stopworks
 
-def palabras_masrepetidas(texto:str)-> lista:
+def palabras_masrepetidas(texto:str)-> list:
+    limpio = texto.lower().replace(",", "").replace(".","").replace("?","").replace("¿","").replace("!","").replace("¡","")
     conteo = dict()
     palabras2 = limpio.split()
 
@@ -39,6 +40,7 @@ def palabras_masrepetidas(texto:str)-> lista:
 
 #def diversidad_lexica (texto):
 def TTR(texto:str) -> int:
+    
     Palabras_unicas=len(set(eliminacion_Stopwords(texto)))
     Palabras_Tsinstop=len(eliminacion_Stopwords(texto))
     return Palabras_unicas/Palabras_Tsinstop
