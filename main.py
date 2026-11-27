@@ -6,6 +6,7 @@ with open (ruta, "r") as file:
 
 if texto.replace(" ", "").replace("\n", "") == "":
     print("El texto es un texto vacio")
-#else:
+else:
+    auxiliar.resultados(texto)
 
 
