@@ -1,5 +1,5 @@
 
-def sentir(texto):
+def sentir(texto:str)-> str:
     positivas = {
     "feliz": 5, "alegria": 8,"amor": 10, "carino": 7, "hermoso": 6, "amistad": 9, "esperanza": 4, "sonrisa": 3, "bondad": 6,
     "maravilloso": 9, "agradable": 4, "tranquilo": 2, "diversion": 7, "exito": 8, "generoso": 5, "amable": 3, "emocion": 6,
