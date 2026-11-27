@@ -1,7 +1,7 @@
 import auxiliar
 
 ruta = auxiliar.seleccionar_archivo()
-with open (ruta, "r") as file:
+with open (ruta, "r", encoding="utf-8") as file:
     texto = file.read()
 
 if texto.replace(" ", "").replace("\n", "") == "":
